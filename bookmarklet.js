@@ -1,0 +1,1 @@
+javascript:(function(){var l=document.createElement('link');l.setAttribute("rel", "stylesheet");l.src="https://sladwig.github.io/darkcloud-soundmode/darksound-cloudmode.css"})();
