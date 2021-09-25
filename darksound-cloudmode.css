@@ -1,4 +1,4 @@
-body {
+body, #app {
 	background: #3d2900 !important;
 	color: #fcf4e3 !important;
 }
