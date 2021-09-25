@@ -1,1 +1,6 @@
-javascript:(function(){var theDark=document.createElement('link');theDark.setAttribute('rel', 'stylesheet');theDark.src='https://sladwig.github.io/darkcloud-soundmode/darksound-cloudmode.css'};document.body.appendChild(theDark))();
+javascript:(function(){
+var theDark=document.createElement('link');
+theDark.setAttribute('rel', 'stylesheet');
+theDark.href='https://sladwig.github.io/darkcloud-soundmode/darksound-cloudmode.css';
+document.head.prepend(theDark)}
+)();
