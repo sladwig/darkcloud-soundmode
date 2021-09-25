@@ -1,7 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-  <body>
-<a href="javascript:(function()%7Bvar%20theDark%3Ddocument.createElement('link')%3B%0AtheDark.setAttribute('rel'%2C%20'stylesheet')%3B%0AtheDark.href%3D'https%3A%2F%2Fsladwig.github.io%2Fdarkcloud-soundmode%2Fdarksound-cloudmode.css'%3B%0Adocument.body.appendChild(theDark)%3B%7D)()%3B">lift me up</a>
-  </body>
+  <head>
+    <title>let the darkness in</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+      .arrow-up {
+
+      }
+    </script>
+  </head>
+  <body class="">
+    <div class="z-10 relative">
+      
+    <div class="min-h-screen w-full flex-col flex items-center justify-center">
+  
+
+<!--   <div class="text-whie item-center flex-auo"></div>
+ -->  <div class="flex-asuto flex flex-start">
+  <a id="link" class="border-4 flex-1 border-white rounded-lg p-2 shadow-2xl" draggable="true">dark me up</a>
+    </div>
+</div>
+</div>
+    <div class="absolute w-full h-full bgk-yellow-100 top-0 opacity-100 z"></div>
+
+
+<script>
+const theDarkFrom = "https://sladwig.github.io/darkcloud-soundmode/darksound-cloudmode.css";  
+const otherDarknessFrom = new URLSearchParams(window.location.search).get('dark');
+const darkStyle = otherDarknessFrom ?? theDarkFrom;
+const clapIn = (something) => `javascript:${encodeURIComponent("(function(){"+something+"})();")}`
+
+fetch("/bookmarklet.js")
+  .then(r => r.text())
+  .then(theDarkness => {
+    theDarkness = theDarkness.replaceAll('{-URL-}', darkStyle)
+
+    document.getElementById('link').href = clapIn(theDarkness);
+
+})
+
+
+    var mX, mY, distance,
+        $body = document.body,
+        $elem  = document.querySelector('#element');
+
+    function distance(({pageX, pageY})=> {
+        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+    }
+    const updateBg = (val) => $body.style.backgroundColor = rgba()
+
+    document.mousemove((pageX, pageY) => {  
+        mX = e.pageX;
+        mY = e.pageY;
+        distance = calculateDistance($element, mX, mY);
+        $distance.text(distance);         
+    });
+
+</script>
+</body>
 </html>

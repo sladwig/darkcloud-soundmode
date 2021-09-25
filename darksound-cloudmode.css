@@ -1,4 +1,53 @@
-body, #app {
-	background: #3d2900 !important;
-	color: #fcf4e3 !important;
+body, 
+#app, 
+.quotaMeterWrapper, 
+#app .l-content a, 
+.playControls__inner, 
+section.playControls__inner, 
+.playControls__inner a, 
+.playControls__bg, 
+.playControls__inner, 
+.queue,
+.header__logo a {
+	transition: color 500ms ease-in, background-color 500ms ease-in!important;
+	will-change: color, background-color;
 }
+
+.sc-border-light-right, .mixedSelectionModule {
+	transition: border-color 500ms ease-in;
+	will-change: border-color;
+}
+.sc-button, button, input, .queue__clear, .queue_hide {
+	transition: color 500ms ease-in, background-color 500ms ease-in, border-color 500ms ease-in;
+	will-change: color, background-color, border-color;
+}
+
+body.dark, 
+.dark #app, 
+.dark .quotaMeterWrapper, 
+.dark #app .l-content a, 
+.dark .playControls__inner, 
+.dark section.playControls__inner, 
+.dark .playControls__inner a, 
+.dark .playControls__bg, 
+.dark .playControls__inner, 
+.dark .queue {
+	background-color: #111!important;
+	color: rgb(153, 153, 153)!important;
+}
+.dark .header__logo a {
+	background-color:  rgb(153, 153, 153);
+}
+
+.dark .sc-border-light-right, .dark .mixedSelectionModule {
+	border-color: rgb(34, 34, 34);
+}
+.dark .sc-button,
+.dark button,
+.dark input,
+.dark .queue__clear, 
+.dark .queue_hide {
+	border-color: rgb(153, 153, 153);
+	color: rgb(153, 153, 153);
+}
+

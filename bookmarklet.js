@@ -1,6 +1,6 @@
-javascript:(function(){
-var theDark=document.createElement('link');
+var theDark = document.querySelector('#the-dark') ?? document.createElement('link');
 theDark.setAttribute('rel', 'stylesheet');
-theDark.href='https://sladwig.github.io/darkcloud-soundmode/darksound-cloudmode.css';
-document.head.prepend(theDark)}
-)();
+theDark.id = 'the-dark';
+theDark.href='{-URL-}';
+if (!document.body.contains(theDark)) document.body.appendChild(theDark);
+document.body.classList.toggle("dark");
