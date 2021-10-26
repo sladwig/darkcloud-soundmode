@@ -28,7 +28,7 @@ const otherDarknessFrom = new URLSearchParams(window.location.search).get('dark'
 const darkStyle = otherDarknessFrom ?? theDarkFrom;
 const surroundIn = (something) => `javascript:${encodeURIComponent("(function(){"+something+"})();")}`
 
-fetch("/bookmarklet.js")
+fetch("bookmarklet.js")
   .then(r => r.text())
   .then(darkness => {
     darkness = darkness.replaceAll('{-URL-}', darkStyle)
